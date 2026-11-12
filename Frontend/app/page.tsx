@@ -127,8 +127,6 @@ export default function GridHumDashboard() {
         <div className="flex items-center space-x-4 text-xs">
           <div className="hidden sm:flex items-center space-x-2 bg-zinc-950 px-3 py-1.5 rounded border border-zinc-800">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-            <span className="text-zinc-400">Backend:</span>
-            <span className="text-emerald-400 font-semibold">ONLINE ({API_BASE})</span>
           </div>
         </div>
       </header>
