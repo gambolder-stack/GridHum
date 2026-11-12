@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useRef } from "react";
 import { 
   Upload, Terminal, Activity, ShieldAlert, Cpu, Download, 
@@ -9,7 +8,6 @@ import {
   ResponsiveContainer, LineChart, Line, XAxis, YAxis, 
   Tooltip, CartesianGrid, ReferenceLine 
 } from "recharts";
-
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 interface AnalysisResult {
