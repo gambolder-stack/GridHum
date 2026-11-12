@@ -149,7 +149,7 @@ export default function GridHumDashboard() {
             >
               <FileAudio className="w-10 h-10 text-zinc-500 group-hover:text-zinc-300 mb-2 transition" />
               <p className="text-xs text-zinc-300 font-medium">
-                {file ? file.name : "Drop audio/video asset or click to browse"}
+                {file ? file.name : "click to browse"}
               </p>
               <p className="text-[10px] text-zinc-500 mt-1">Supports .mp3, .wav, .mp4, .mov, .ogg (Max 50MB)</p>
               <input 
