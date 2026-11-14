@@ -5,7 +5,7 @@ import "./globals.css";
 
 declare global {
   interface Window {
-    dataLayer: unknown[];
+    dataLayer: Object[] | undefined;
   }
 }
 
@@ -32,14 +32,18 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body>{children}</body>
-
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WSKBBH9P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
+      <body>
+        {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag('js', new Date());
+            `,
+          }}
+        />
+      </body>
 
       <GoogleTagManager gtmId="GTM-WSKBBH9P" />
     </html>
